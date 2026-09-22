@@ -1,7 +1,7 @@
 import type{State,WordProgress}from'./types';
 const KEY='wordlock-v2';
 export const defaultProgress=():WordProgress=>({seen:0,correct:0,wrong:0,unknown:0,accuracy:0,status:'new',correctStreak:0,reviewStage:0,questionTypes:[],daysCorrect:[]});
-export const defaults:State={version:21,learningDay:1,settings:{dailyWords:5,challengeSize:20,showTurkishAfterWrong:true,showExamplesAfterWrong:true,includeFavorites:true},favorites:[],learned:[],todayIds:[],todayCursor:0,todayCompleted:false,xp:0,streak:0,progress:{}};
-export function loadState():State{try{const old=JSON.parse(localStorage.getItem(KEY)||localStorage.getItem('wordlock-v2-sprint1')||'{}');return{...defaults,...old,version:21,settings:{...defaults.settings,...old.settings},progress:old.progress||{}}}catch{return defaults}}
+export const defaults:State={version:3,learningDay:1,settings:{dailyWords:5,challengeSize:20,showTurkishAfterWrong:true,showExamplesAfterWrong:true,includeFavorites:true},favorites:[],learned:[],todayIds:[],todayCursor:0,todayCompleted:false,xp:0,streak:0,progress:{}};
+export function loadState():State{try{const old=JSON.parse(localStorage.getItem(KEY)||localStorage.getItem('wordlock-v2-sprint1')||'{}');return{...defaults,...old,version:3,settings:{...defaults.settings,...old.settings},progress:old.progress||{}}}catch{return defaults}}
 export const saveState=(s:State)=>localStorage.setItem(KEY,JSON.stringify(s));
 export const resetState=()=>{localStorage.removeItem(KEY);localStorage.removeItem('wordlock-v2-sprint1')};
