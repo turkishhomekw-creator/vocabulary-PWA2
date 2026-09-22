@@ -1,0 +1,4 @@
+export type Word={id:number;word:string;pos:string;definition:string;turkish:string;difficulty:string;category:string;synonyms:string[];antonyms:string[];examples:string[];fillBlank:string;distractors:string[]};
+export type Settings={dailyWords:3|5|7|10;challengeSize:10|20|30;showTurkishAfterWrong:boolean;showExamplesAfterWrong:boolean;includeFavorites:boolean;favoriteReminder:boolean};
+export type State={version:1;learningDay:number;settings:Settings;favorites:number[];learned:number[];todayIds:number[];todayCursor:number;todayCompleted:boolean};
+export type Screen='home'|'today'|'favorites'|'settings'|'placeholder';
