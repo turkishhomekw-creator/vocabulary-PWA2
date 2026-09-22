@@ -1,24 +1,15 @@
-# WordLock V2 - Sprint 1
+# WordLock V2 - Sprint 2
 
-## Kapsam
-- Home Dashboard
-- Today’s Words (ileri/geri, dinamik 1/N ilerleme)
-- Settings
-- LocalStorage persistence
-- Favorites
-- PWA manifest ve offline cache
-- 384 kelimelik denetlenmiş veri seti
+## Eklenenler
+- Uçtan uca daily challenge
+- 6 soru tipi: definition, word-definition, fill blank, synonym, antonym, Turkish
+- Aynı kelime en fazla 2 kez ve farklı soru tipleriyle
+- Bootstrap challenge length
+- XP, streak, result screen
+- Risky (<60%, min 3 cevap)
+- Master (>95%, min 10 cevap + diğer koşullar)
+- Risky, Master ve Favorites özel challenge
+- Word detail progress
+- Sprint 1 localStorage migration
 
-## GitHub Pages
-1. Zip içeriğini GitHub repository köküne yükleyin.
-2. Repository Settings > Pages bölümünde Source olarak GitHub Actions seçin.
-3. Actions sekmesinde deploy workflow tamamlandığında Pages bağlantısını açın.
-
-## Yerel geliştirme
-```bash
-npm install
-npm run dev
-```
-
-## Not
-Challenge butonu Sprint 2 placeholderıdır. Sprint 1 kapsamı özellikle Home, Today’s Words, Settings, Persistence ve Favorites ile dondurulmuştur.
+GitHub'a zip içeriğini repository köküne yükleyin. Mevcut dosyaların üzerine yazın. `.github/workflows/deploy.yml` dosyası dahildir.

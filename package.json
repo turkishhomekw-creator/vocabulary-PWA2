@@ -1,9 +1,6 @@
 {
-  "name": "wordlock-v2-sprint1",
-  "private": true,
-  "version": "2.0.0-sprint1",
-  "type": "module",
-  "scripts": {"dev":"vite","build":"tsc -b && vite build","preview":"vite preview"},
-  "dependencies": {"@vitejs/plugin-react":"latest","vite":"latest","typescript":"latest","react":"latest","react-dom":"latest"},
-  "devDependencies": {"@types/react":"latest","@types/react-dom":"latest"}
+  "name":"wordlock-v2-sprint2","private":true,"version":"2.0.0-sprint2","type":"module",
+  "scripts":{"dev":"vite","build":"vite build","preview":"vite preview"},
+  "dependencies":{"@vitejs/plugin-react":"4.3.4","vite":"6.0.11","typescript":"5.7.3","react":"19.0.0","react-dom":"19.0.0"},
+  "devDependencies":{"@types/react":"19.0.8","@types/react-dom":"19.0.3"}
 }
