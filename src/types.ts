@@ -1,4 +1,10 @@
 export type Word={id:number;word:string;pos:string;definition:string;turkish:string;difficulty:string;category:string;synonyms:string[];antonyms:string[];examples:string[];fillBlank:string;distractors:string[]};
+export type Status='new'|'learning'|'strong'|'risky'|'master'|'masterReview';
+export type WordProgress={seen:number;correct:number;wrong:number;unknown:number;accuracy:number;status:Status;correctStreak:number;reviewStage:number;lastSeen?:string;nextReview?:string;masterDate?:string;questionTypes:string[];daysCorrect:string[]};
 export type Settings={dailyWords:3|5|7|10;challengeSize:10|20|30;showTurkishAfterWrong:boolean;showExamplesAfterWrong:boolean;includeFavorites:boolean;favoriteReminder:boolean};
-export type State={version:1;learningDay:number;settings:Settings;favorites:number[];learned:number[];todayIds:number[];todayCursor:number;todayCompleted:boolean};
-export type Screen='home'|'today'|'favorites'|'settings'|'placeholder';
+export type State={version:2;learningDay:number;settings:Settings;favorites:number[];learned:number[];todayIds:number[];todayCursor:number;todayCompleted:boolean;xp:number;streak:number;lastCompleted?:string;progress:Record<number,WordProgress>;challenge?:ChallengeState;lastResult?:Result};
+export type QType='definitionWord'|'wordDefinition'|'fillBlank'|'synonym'|'antonym'|'turkish';
+export type Question={wordId:number;type:QType;prompt:string;options:string[];answer:number};
+export type ChallengeState={kind:'daily'|'risky'|'favorites'|'master';questions:Question[];index:number;answers:{wordId:number;correct:boolean;unknown:boolean}[];score:number;streakNow:number};
+export type Result={kind:string;correct:number;wrong:number;unknown:number;xp:number;newRisky:number[];newMaster:number[];improved:number[]};
+export type Screen='home'|'today'|'challenge'|'result'|'favorites'|'risky'|'master'|'settings'|'word';
