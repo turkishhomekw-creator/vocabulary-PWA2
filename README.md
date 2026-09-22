@@ -1,16 +1,15 @@
-# WordLock V2 - Sprint 2
+# WordLock V2.1 Stabilization
 
-## Eklenenler
-- Uçtan uca daily challenge
-- 6 soru tipi: definition, word-definition, fill blank, synonym, antonym, Turkish
-- Aynı kelime en fazla 2 kez ve farklı soru tipleriyle
-- Bootstrap challenge length
-- XP, streak, result screen
-- Risky (<60%, min 3 cevap)
-- Master (>95%, min 10 cevap + diğer koşullar)
-- Risky, Master ve Favorites özel challenge
-- Word detail progress
-- Sprint 1 localStorage migration
+## Duzeltmeler
+- `undefined` dogru cevap hatasi giderildi. Sorular artik `correctAnswer` metnini dogrudan saklar.
+- Dogru cevabin mutlaka 4 secenek icinde bulunmasi garanti edildi.
+- Hedef kelime synonym/antonym sorularinda distractor olarak kullanilmaz.
+- Ayni secenegin tekrarlanmasi engellendi.
+- Challenge sorularinin buyuk cogunlugu Ingilizcedir; her 10 soruda en fazla 1 Turkish Meaning sorusu hedeflenir.
+- Ogrenilen karti artik tiklanabilir ve ogrenilen kelimeleri listeler.
+- Riskli/Master bos ekranlarina kriter aciklamasi eklendi.
+- Ana ekran hero ve buton yerlesimleri duzeltildi.
+- Service worker cache adi V2.1 olarak degistirildi.
 
-GitHub'a zip içeriğini repository köküne yükleyin. Mevcut dosyaların üzerine yazın. `.github/workflows/deploy.yml` dosyası dahildir.
-s
+## ONEMLI
+Bu paket `public/words.json` dosyasini bilerek icermez. GitHub repository'de mevcut Sprint 2 `public/words.json` dosyasini SILMEYIN. ZIP icerigini repository kokune yukleyin ve ayni isimli dosyalarin uzerine yazin.
