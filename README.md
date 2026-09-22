@@ -13,3 +13,4 @@
 - Sprint 1 localStorage migration
 
 GitHub'a zip içeriğini repository köküne yükleyin. Mevcut dosyaların üzerine yazın. `.github/workflows/deploy.yml` dosyası dahildir.
+s
